@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/fragmentSearch">
+
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.work.dictionarry.presentation.search.MainSearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_main_search">
+
+        <action
+            android:id="@+id/search_fragment_action"
+            app:destination="@id/fragmentInfo"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentInfo"
+        android:name="com.work.dictionarry.presentation.info.WordInfoFragment"
+        android:label="InfoFragment"
+        tools:layout="@layout/fragment_word_info">
+
+        <action
+            android:id="@+id/additions_fragment_action"
+            app:destination="@id/fragmentAdditions"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="word"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="api"
+            app:argType="integer"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentAdditions"
+        android:name="com.work.dictionarry.presentation.addition.WordAdditionsFragment"
+        android:label="AdditionFragment"
+        tools:layout="@layout/fragment_word_addition">
+
+        <argument
+            android:name="word"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="type"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/addition_fragment_action"
+            app:destination="@id/fragmentInfo"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/fragmentSearch" />
+    </fragment>
+</navigation>

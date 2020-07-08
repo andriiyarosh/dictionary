@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+    <string name="search_title">Find word</string>
+    <string name="find_word">Find word</string>
+    <string name="pronunciation">Pronunciation: [%s]</string>
+    <string name="syllables">Syllables: "%s"</string>
+    <string name="get_synonyms">Get synonyms</string>
+    <string name="get_rhymes">Get rhymes</string>
+    <string name="word_info">Word info</string>
+    <string name="definitions">Definitions:</string>
+    <string name="synonyms">Synonyms</string>
+    <string name="synonymsTv">Synonyms:</string>
+    <string name="rhymes">Rhymes</string>
+    <string name="rhymesTv">Rhymes:</string>
+    <string name="addition_of">%s of:</string>
+    <string name="your_word">Your word:</string>
+    <string name="urban_dictionary">Urban dictionary</string>
+    <string name="words_api">Words API</string>
+</resources>
